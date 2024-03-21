@@ -74,12 +74,9 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List *L, int elem) {
-
-  while (first(L) != NULL) {
-    if (*(int *)first(L) == elem) {
-      popCurrent(L);
-    }
-  }
+//   while (first(L) != NULL) {
+//     if (*(int *)first(L) == elem) popCurrent(L);
+//   }
 }
 
 /*
@@ -89,7 +86,13 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack *P1, Stack *P2) {}
+void copia_pila(Stack *P1, Stack *P2) {
+  while (top(P1) != NULL){
+    push(P2, top(P1));
+    pop(P1);
+  }
+}
+
 
 /*
 Ejercicio 5.
