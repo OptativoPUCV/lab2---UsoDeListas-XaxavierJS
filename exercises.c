@@ -109,24 +109,13 @@ int parentesisBalanceados(char *cadena) {
   Stack *pila = create_stack();
   char *elemento = (char *)first((List *)cadena);
   while (elemento != NULL) {
-    if (*elemento == '(' || *elemento == '[' || *elemento == '{') {
-      push(pila, elemento);
-    } else {
-      switch (*elemento) {
-      case '(':
-        if (*elemento != ')')
-          return 0;
-      case '[':
-        if (*elemento != ']')
-          return 0;
-      case '}':
-        if (*elemento != '}')
-          return 0;
-      default:
-        continue;
-      }
-    }
-    elemento = next((List *)cadena);
+    push(pila, elemento);
+    elemento = (char *)next((List *)cadena);
   }
+  elemento = (char *)first((List *)cadena);
+  while (top(pila) != NULL) {
+    if (elemento == pop(pila)) return 0;
+  }
+
   return 1;
 }
