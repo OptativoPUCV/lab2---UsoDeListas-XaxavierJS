@@ -300,3 +300,17 @@ exercises.c:124:13: error: ‘abierto’ may be used uninitialized [-Werror=mayb
 cc1: all warnings being treated as errors
 Compilation failed
 ae00315
+Thu 21 Mar 2024 01:04:09 AM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:116:25: error: statement will never be executed [-Werror=switch-unreachable]
+  116 |         char *abierto = top(pila);
+      |                         ^~~~~~~~~
+exercises.c:124:13: error: ‘abierto’ may be used uninitialized [-Werror=maybe-uninitialized]
+  124 |         if (*abierto != '}')
+      |             ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+88d5ee6
