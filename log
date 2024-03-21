@@ -314,3 +314,9 @@ exercises.c:124:13: error: ‘abierto’ may be used uninitialized [-Werror=mayb
 cc1: all warnings being treated as errors
 Compilation failed
 88d5ee6
+Thu 21 Mar 2024 01:06:21 AM UTC: 
+ exercises.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+ tests:  4|2
+total_score: 30/70
+c63d181
