@@ -214,3 +214,39 @@ arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char�
 cc1: all warnings being treated as errors
 Compilation failed
 0952617
+Thu 21 Mar 2024 12:53:00 AM UTC: 
+ exercises.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:110:26: error: passing argument 1 of ‘first’ makes pointer from integer without a cast [-Werror=int-conversion]
+  110 |   char *elemento = first(*cadena);
+      |                          ^~~~~~~
+      |                          |
+      |                          char
+In file included from exercises.c:1,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:130:21: error: passing argument 1 of ‘next’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  130 |     elemento = next((char *)cadena);
+      |                     ^~~~~~~~~~~~~~
+      |                     |
+      |                     char *
+In file included from exercises.c:1,
+                 from test.c:5:
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+In file included from test.c:5:
+exercises.c:116:25: error: statement will never be executed [-Werror=switch-unreachable]
+  116 |         char *abierto = top(pila);
+      |                         ^~~~~~~~~
+exercises.c:124:13: error: ‘abierto’ may be used uninitialized [-Werror=maybe-uninitialized]
+  124 |         if (*abierto != '{')
+      |             ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+54270d9
