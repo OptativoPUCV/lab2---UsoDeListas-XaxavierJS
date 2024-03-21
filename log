@@ -339,3 +339,9 @@ exercises.c:131:7: note: did you mean to dereference the pointer?
 cc1: all warnings being treated as errors
 Compilation failed
 f8852c6
+Thu 21 Mar 2024 01:09:10 AM UTC: 
+ exercises.c | 3 ---
+ 1 file changed, 3 deletions(-)
+ tests:  4|2
+total_score: 30/70
+470ce17
