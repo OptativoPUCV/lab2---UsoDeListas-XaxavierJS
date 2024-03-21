@@ -74,9 +74,12 @@ posiciona en el elemento anterior.
 */
 
 void eliminaElementos(List *L, int elem) {
-  //   while (first(L) != NULL) {
-  //     if (*(int *)first(L) == elem) popCurrent(L);
-  //   }
+  int *aux = (int *)first(L);
+  while (first(L) != NULL) {
+    if (*aux == elem)
+      pop(L);
+    
+  }
 }
 
 /*
@@ -113,9 +116,6 @@ int parentesisBalanceados(char *cadena) {
     elemento = (char *)next((List *)cadena);
   }
   elemento = (char *)first((List *)cadena);
-  while (top(pila) != NULL) {
-    if (elemento == pop(pila)) return 0;
-  }
 
   return 1;
 }
