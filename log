@@ -250,3 +250,39 @@ exercises.c:124:13: error: ‘abierto’ may be used uninitialized [-Werror=mayb
 cc1: all warnings being treated as errors
 Compilation failed
 54270d9
+Thu 21 Mar 2024 01:00:49 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:110:35: error: passing argument 1 of ‘first’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  110 |   char *elemento = (char *) first(&cadena);
+      |                                   ^~~~~~~
+      |                                   |
+      |                                   char **
+In file included from exercises.c:1,
+                 from test.c:5:
+arraylist.h:10:19: note: expected ‘List *’ but argument is of type ‘char **’
+   10 | void* first(List *L);
+      |             ~~~~~~^
+In file included from test.c:5:
+exercises.c:130:21: error: passing argument 1 of ‘next’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  130 |     elemento = next(cadena);
+      |                     ^~~~~~
+      |                     |
+      |                     char *
+In file included from exercises.c:1,
+                 from test.c:5:
+arraylist.h:14:18: note: expected ‘List *’ but argument is of type ‘char *’
+   14 | void* next(List *L);
+      |            ~~~~~~^
+In file included from test.c:5:
+exercises.c:116:25: error: statement will never be executed [-Werror=switch-unreachable]
+  116 |         char *abierto = top(pila);
+      |                         ^~~~~~~~~
+exercises.c:124:13: error: ‘abierto’ may be used uninitialized [-Werror=maybe-uninitialized]
+  124 |         if (*abierto != '{')
+      |             ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+68049b3
