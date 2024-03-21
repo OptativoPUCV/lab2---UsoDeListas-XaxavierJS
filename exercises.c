@@ -77,8 +77,10 @@ void eliminaElementos(List *L, int elem) {
   int *aux = (int *)first(L);
   while (first(L) != NULL) {
     if (*aux == elem)
-      pop(L);
-    
+      popCurrent(L);
+    else{
+      next(L);
+    }
   }
 }
 
