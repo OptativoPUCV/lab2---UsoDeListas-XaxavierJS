@@ -113,14 +113,14 @@ int parentesisBalanceados(char *cadena) {
       push(pila, elemento);
     } else {
       switch (*elemento) {
-      case ')':
-        if (*elemento != '(')
+      case '(':
+        if (*elemento != ')')
           return 0;
-      case ']':
-        if (*elemento != '[')
+      case '[':
+        if (*elemento != ']')
           return 0;
       case '}':
-        if (*elemento != '{')
+        if (*elemento != '}')
           return 0;
       default:
         continue;
