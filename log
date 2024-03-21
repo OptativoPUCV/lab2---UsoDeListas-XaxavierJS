@@ -325,3 +325,17 @@ Thu 21 Mar 2024 01:07:16 AM UTC:
  1 file changed, 3 insertions(+)
  tests:  0|0
 2b17637
+Thu 21 Mar 2024 01:07:59 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:131:17: error: comparison between pointer and zero character constant [-Werror=pointer-compare]
+  131 |   if (top(pila) != '\0') {
+      |                 ^~
+exercises.c:131:7: note: did you mean to dereference the pointer?
+  131 |   if (top(pila) != '\0') {
+      |       ^
+cc1: all warnings being treated as errors
+Compilation failed
+f8852c6
