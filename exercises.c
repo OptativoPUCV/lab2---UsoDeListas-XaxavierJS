@@ -57,11 +57,10 @@ Crea una función que reciba una lista de enteros (int*) y
 retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
-   int suma = 0;
+  int suma = 0;
   while (first(L) != NULL){
     suma += *(int*)first(L);
     popFront(L);
-    
   }
    return suma;
 }
@@ -77,6 +76,13 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List*L, int elem){
 
+  while (first(L) != NULL){
+    if (*(int*)first(L) == elem) {
+      popFront(L);
+    }
+  }
+
+  
 }
 
 /*
